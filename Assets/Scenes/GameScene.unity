@@ -6232,6 +6232,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1701653424}
     - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 943610408}
+    - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
@@ -6240,12 +6244,20 @@ PrefabInstance:
       value: StartGame
       objectReference: {fileID: 0}
     - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112221875060892606, guid: e3a553e0c267d274cbe25e88f9e52a4a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10084,12 +10096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileManager:
-  - {fileID: 379615517850859912, guid: 66dcb9a5f802c3242adf955c34cd1c7b, type: 3}
-  - {fileID: 379615517850859912, guid: 5a419fafc28d3ab4e99dfe4e1fb41992, type: 3}
-  - {fileID: 379615517850859912, guid: 71a2c25282f69e24d846872b896929a5, type: 3}
-  - {fileID: 379615517850859912, guid: 41bf2d350741da44693f01962adcbf75, type: 3}
-  - {fileID: 379615517850859912, guid: 0370734c95b5ba5419c2c2d5df3c4b66, type: 3}
-  - {fileID: 379615517850859912, guid: 06f62c34807cc5e4c8aae5daf06bde94, type: 3}
+  - {fileID: 194711793763997648, guid: 598750edef8bb29498c9ccd1f094a73d, type: 3}
 --- !u!4 &1701653425
 Transform:
   m_ObjectHideFlags: 0
@@ -12031,7 +12038,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7abcb97ddd7f41b4aa9779214ddbd20e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c00d6c165532ba149927492b810e945e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

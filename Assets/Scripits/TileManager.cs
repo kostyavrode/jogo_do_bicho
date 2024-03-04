@@ -77,7 +77,7 @@ public class TileManager : MonoBehaviour
             PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 3);
             PlayerPrefs.Save();
         }
-        //GameManager.instance.EndGame(true);
+        GameManager.instance.EndGame(true);
     }
     private IEnumerator WaitForUnSelectTile(Tile tile)
     {
@@ -86,7 +86,7 @@ public class TileManager : MonoBehaviour
     }
     private IEnumerator WaitForShowTiles(int x,Tile tile)
     {
-        yield return new WaitForSeconds(0.2f * x);
+        yield return new WaitForSeconds(0.3f * x);
         tile.FlipTile();
     }
 }
