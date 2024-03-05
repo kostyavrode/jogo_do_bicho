@@ -120,6 +120,10 @@ public class UIManager : MonoBehaviour
         bestScoreBar.text = bestScore;
         bestScore2Bar.text = bestScore;
     }
+    public void CloseApp()
+    {
+        Application.Quit();
+    }
     public void ShowPrivacy(string url)
     {
         var webviewObject = new GameObject("UniWebview");

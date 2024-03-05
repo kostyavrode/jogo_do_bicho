@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffc71ba9f7599b408ea63cde8b03763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 3
   tilePrefab: {fileID: 4365840663252197229}
   selectedTiles: []
   allTiles:
