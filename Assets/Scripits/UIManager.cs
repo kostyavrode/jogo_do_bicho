@@ -9,10 +9,13 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     [SerializeField] private TMP_Text scoreBar;
     [SerializeField] private TMP_Text bestScoreBar;
+    [SerializeField] private TMP_Text bestScore2Bar;
     [SerializeField] private TMP_Text moneyBar;
     [SerializeField] private GameObject soundButtonOn;
     [SerializeField] private GameObject soundButtonOff;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private Image uiTime;
+    [SerializeField] private GameObject zhopa;
     private UniWebView uniWebView;
     [SerializeField] public GameObject[] elements;
     [SerializeField] private GameObject blackWindow;
@@ -105,13 +108,17 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void ShowScore(string score)
+    public void ShowScore(float score)
     {
-        scoreBar.text = score;
+        Debug.Log(score);
+        float temp=score;
+        uiTime.fillAmount = temp/60f;
+        //scoreBar.text = score;
     }
     public void ShowBestScore(string bestScore)
     {
-        //bestScoreBar.text = bestScore;
+        bestScoreBar.text = bestScore;
+        bestScore2Bar.text = bestScore;
     }
     public void ShowPrivacy(string url)
     {

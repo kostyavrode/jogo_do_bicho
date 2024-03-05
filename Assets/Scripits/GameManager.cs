@@ -12,12 +12,13 @@ public class GameManager : MonoBehaviour
     private float currentTimeScale;
     private float score;
     private int money;
+    private float localTIme;
     private int lastLoadedLevel;
     private int timeForRound;
     private TileManager lastLoadedTileManager;
     private void Awake()
     {
-        timeForRound = 30+PlayerPrefs.GetInt("TimeBonus");
+        timeForRound = 60+PlayerPrefs.GetInt("TimeBonus");
         instance = this;
         currentTimeScale = Time.timeScale;
         if (PlayerPrefs.HasKey("Money"))
@@ -39,17 +40,12 @@ public class GameManager : MonoBehaviour
     {
         if (isGameStarted)
         {
-            
+            localTIme += Time.fixedDeltaTime;
+            UIManager.instance.ShowScore(60 - localTIme);
             score += Time.fixedDeltaTime;
-            if (score>=1)
+            if (localTIme>60)
             {
-                timeForRound -= 1;
-                score = 0;
-                UIManager.instance.ShowScore(timeForRound.ToString());
-                if (timeForRound==0)
-                {
-                    EndGame(false);
-                }
+                EndGame(false);
             }
             
         }
@@ -60,7 +56,7 @@ public class GameManager : MonoBehaviour
         isGameStarted = true;
         onGameStarted?.Invoke();
         Time.timeScale = 1f;
-        UIManager.instance.ShowScore(timeForRound.ToString());
+        UIManager.instance.ShowScore(60 -localTIme) ;
         if (level==0)
         {
             Destroy(lastLoadedTileManager.gameObject);
@@ -97,6 +93,7 @@ public class GameManager : MonoBehaviour
         isGameStarted = false;
         CheckBestScore();
         UIManager.instance.EndGame(isWin);
+        UIManager.instance.ShowBestScore(Mathf.RoundToInt(localTIme).ToString());
     }
     private void CheckBestScore()
     {
